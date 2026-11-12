@@ -82,3 +82,62 @@ Telegram's protected application data.
 
 Selected sanitised screenshots and evidence references
 will be added after verification and publication review.
+
+
+
+## 11. Verified Forensic Evidence
+
+### Evidence 1 — SHA-256 Verification
+
+SHA-256 was calculated for the original Telegram APK
+to document its cryptographic hash.
+
+![SHA-256 Verification](screenshots/Figure_02_SHA256_Verification.png)
+
+### Evidence 2 — Pre-Login SQLite Examination
+
+Autopsy displayed the messages_v2 table with
+0 entries in the examined pre-login database.
+
+![Pre-Login SQLite](screenshots/Figure_14_PreLogin_Messages_Tables.png)
+
+### Evidence 3 — Post-Login Database Analysis
+
+SQLite queries returned:
+- messages_v2: 5 records
+- dialogs: 3 records
+
+![Post-Login SQLite](screenshots/Figure_19_PostLogin_SQLite_Counts.png)
+
+### Evidence 4 — Controlled Message Testing
+
+After controlled message testing, SQLite queries returned:
+- messages_v2: 6 records
+- dialogs: 4 records
+
+These counts show differences between the examined
+database states. They do not independently establish
+the cause of every change.
+
+![Message Testing](screenshots/Figure_20_PostTset_Message001_SQLite_Counts.png)
+
+### Evidence 5 — Image Artefact Examination
+
+A search for the test image filename returned:
+- Before image testing: 0 matches
+- After image testing: 1 match
+
+This supports the observation that the filename
+was present in the examined post-test database.
+
+![Image Verification](screenshots/Figure_23_Image_Before_After_Verification.png)
+
+## 12. Evidence Interpretation
+
+The screenshots document forensic examination
+procedures and observable database differences.
+
+Record counts and filename matches alone do not
+prove complete message recovery or establish
+that deleted data can be reconstructed.
+
