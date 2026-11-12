@@ -91,3 +91,23 @@ These skills are relevant to Digital Forensics, Cybersecurity Analysis, and Inci
 **Confidentiality Notice**
 
 No personal messages, authentication credentials, session tokens, private account information, or confidential assessment evidence are included in this documentation.
+
+
+## Investigation Documentation
+
+Explore the technical documentation and supporting evidence:
+
+- 📋 [Investigation Methodology](methodology.md)
+- 🔍 [Forensic Findings & Analysis](findings.md)
+- 📸 [Evidence Screenshots](screenshots/README.md)
+
+## Key Investigation Highlights
+
+- Android application examination and log collection
+- SQLite database analysis and record comparison
+- Controlled message and image testing
+- Post-deletion database and WAL artefact analysis
+- SHA-256 evidence hashing
+
+All findings are based on controlled laboratory testing.
+
