@@ -141,3 +141,46 @@ Record counts and filename matches alone do not
 prove complete message recovery or establish
 that deleted data can be reconstructed.
 
+
+## 13. Post-Deletion Artefact Analysis
+
+### Objective
+
+To investigate whether a controlled test marker
+remained detectable in Telegram database-related
+files after message deletion testing.
+
+### Examination
+
+A Python script searched for the test marker
+in the raw bytes of two collected files:
+
+- cache4.db
+- cache4.db-wal
+
+### Observed Results
+
+| File | Raw Marker Matches |
+|---|---:|
+| cache4.db | 2 |
+| cache4.db-wal | 14 |
+
+![Post-deletion artefact examination](screenshots/Figure_25_Deleted_Message_Raw_Artifact.png)
+
+### Interpretation
+
+The test marker was detected in both the SQLite
+database and write-ahead log after deletion testing.
+
+These results show residual byte-level matches
+in the examined files.
+
+However, these matches do not prove that
+the deleted message was fully recovered or
+that a complete message record was reconstructed.
+
+### Forensic Significance
+
+This observation highlights why both SQLite
+database files and WAL files may be relevant
+during mobile forensic investigations.
