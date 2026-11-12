@@ -19,7 +19,9 @@ My focus is on understanding application behaviour, identifying digital artefact
 
 ## 📱 Application Investigations
 
-### 01 — Telegram Android Forensic Investigation
+
+### [01 — Telegram Android Forensic Investigation](investigations/telegram/README.md)
+  
 
 **Application:** Telegram Messenger  
 **Platform:** Android  
